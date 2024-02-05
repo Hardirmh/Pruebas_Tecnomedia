@@ -995,6 +995,10 @@ menu {
   max-width: 1480px;
 }
 
+.max-w-\[1920px\] {
+  max-width: 1920px;
+}
+
 .min-w-\[1480px\] {
   min-width: 1480px;
 }
@@ -4763,7 +4767,7 @@ section.primary-dark-to-secondary {
 }
 
 /**************************************
-logos 
+CARRUCEL DE LOGOS 
 **************************************/
 
 * {
@@ -4774,7 +4778,7 @@ logos
 
 @keyframes slide {
   from {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   to {
     transform: translateX(-100%);
@@ -4793,9 +4797,9 @@ logos
 .logos {
   overflow: hidden;
   white-space: nowrap;
-  position: relative;
   overflow: visible;
   background-color: white;
+  position: relative;
 }
 
 .logos-reverse {
@@ -4816,16 +4820,40 @@ logos
   z-index: 2;
 }
 
-.logos:before,
-.logos-reverse:before {
+.logos:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    rgb(128, 55, 155)
+  );
 }
 
-.logos:after,
+.logos:after {
+  right: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgb(52, 178, 51)
+  );
+}
+
+.logos-reverse:before {
+  left: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255)
+  );
+}
+
 .logos-reverse:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255)
+  );
 }
 
 .logos:hover .logos-slide,
@@ -4835,11 +4863,11 @@ logos
 
 .logos-slide {
   display: inline-block;
-  animation: 15s slide infinite linear;
+  animation: 20s slide infinite linear;
 }
 
 .logos-reverse .logos-slide {
-  animation: 15s slide-reverse infinite linear;
+  animation: 20s slide-reverse infinite linear;
 }
 
 .logos-slide img,
@@ -4857,9 +4885,11 @@ footer {
   color: white; /* Cambia el color del texto a tu preferencia */
   padding: 20px 0; /* Espaciado interior superior e inferior */
   text-align: center; /* Alinea el texto al centro */
+  max-width: 1480px;
+  margin: 0 auto;
 }
 
-footer a {
+.footer a {
   color: white; /* Cambia el color de los enlaces a tu preferencia */
   text-decoration: none; /* Quita el subrayado de los enlaces */
 }
@@ -4869,7 +4899,7 @@ footer a {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  /*  max-width: 1200px; */
   margin: 0 auto;
   padding: 0 20px;
 }

@@ -99,32 +99,6 @@ body {
   background-color: var(--light);
 }
 
-/*  .primary-dark-to-secondary {
-  background: transparent
-    linear-gradient(349deg, #1a2c60 0%, var(--secondary) 100%) 0% 0% no-repeat
-    padding-box;
-}  */
-
-/* For purple sections paddings is bigger */
-/* .primary-dark-to-secondary section:first-child {
-  padding-top: 5rem;
-}
-
-.primary-dark-to-secondary section:last-child {
-  padding-bottom: 5rem;
-}
-
-section.primary-dark-to-secondary {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.primary-dark-to-secondary-banner {
-  background: transparent
-    linear-gradient(273deg, var(--primary-dark) 0%, var(--secondary) 100%) 0% 0%
-    no-repeat padding-box;
-} */
-
 .cta:has(div):has(ul) {
   text-align: left;
 }
