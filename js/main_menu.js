@@ -64,13 +64,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Agregar eventos mouseover y mouseout a los botones y menús
-/* document.getElementById("buttonNosotros").addEventListener("mouseover", () => {
+/////////////////////////////////////////////////////////////////////////////////
+document.getElementById("buttonNosotros").addEventListener("mouseover", () => {
+  posisionMenu("buttonNosotros", "menuNosotros");
   showMenu("menuNosotros");
 });
 
 document.getElementById("buttonNosotros").addEventListener("mouseout", () => {
   hideMenu("menuNosotros");
-});*/
+});
 
 document.getElementById("menuNosotros").addEventListener("mouseover", () => {
   showMenu("menuNosotros");
@@ -79,8 +81,9 @@ document.getElementById("menuNosotros").addEventListener("mouseover", () => {
 document.getElementById("menuNosotros").addEventListener("mouseout", () => {
   hideMenu("menuNosotros");
 });
-
+/////////////////////////////////////////////////////////////////////////////////
 document.getElementById("buttonServicios").addEventListener("mouseover", () => {
+  posisionMenu("buttonServicios", "menuServicios");
   showMenu("menuServicios");
 });
 
@@ -95,8 +98,9 @@ document.getElementById("menuServicios").addEventListener("mouseover", () => {
 document.getElementById("menuServicios").addEventListener("mouseout", () => {
   hideMenu("menuServicios");
 });
-
+/////////////////////////////////////////////////////////////////////////////////
 document.getElementById("buttonAliados").addEventListener("mouseover", () => {
+  posisionMenu("buttonAliados", "menuAliados");
   showMenu("menuAliados");
 });
 
@@ -111,8 +115,9 @@ document.getElementById("menuAliados").addEventListener("mouseover", () => {
 document.getElementById("menuAliados").addEventListener("mouseout", () => {
   hideMenu("menuAliados");
 });
-
+//////////////////////////////////////////////////////////////////////////////////
 document.getElementById("buttonOtros").addEventListener("mouseover", () => {
+  posisionMenu("buttonOtros", "menuOtros");
   showMenu("menuOtros");
 });
 
@@ -128,11 +133,11 @@ document.getElementById("menuOtros").addEventListener("mouseout", () => {
   hideMenu("menuOtros");
 });
 
-//:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+/////////////////////////////////////////////////////////////////////////////////
 
-function mostrarMenu(event) {
-  var botonNosotros = document.getElementById("buttonNosotros");
-  var menuNosotros = document.getElementById("menuNosotros");
+function posisionMenu(button, menu) {
+  var botonNosotros = document.getElementById(button);
+  var menuNosotros = document.getElementById(menu);
 
   // Obtener la posición del botón
   var rect = botonNosotros.getBoundingClientRect();
@@ -144,17 +149,10 @@ function mostrarMenu(event) {
   menuNosotros.style.left = left + "px";
 
   // Mostrar el menú
-  menuNosotros.classList.remove("hidden");
+  //menuNosotros.classList.remove("hidden");
 
   // Ocultar el menú cuando el ratón se mueve fuera del botón
-  botonNosotros.addEventListener("mouseout", function () {
+  /* botonNosotros.addEventListener("mouseout", function () {
     menuNosotros.classList.add("hidden");
-  });
+  });*/
 }
-
-// Ocultar el menú cuando el ratón sale del menú
-document
-  .getElementById("menuNosotros")
-  .addEventListener("mouseout", function () {
-    this.classList.add("hidden");
-  });
